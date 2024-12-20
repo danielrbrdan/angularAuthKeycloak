@@ -1,0 +1,22 @@
+<button (click)="authService.logout()">Logout</button>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let test of tests">
+    <td>{{ test.id }}</td>
+    <td>{{ test.name }}</td>
+  </tr>
+</table>
+
+<br />
+
+<form [formGroup]="formCreate">
+  <label for="name"></label>
+  <input name="name" type="text" formControlName="name" />
+
+  <button (click)="create()">Adicionar</button>
+</form>
+
+<h4>{{ message }}</h4>
